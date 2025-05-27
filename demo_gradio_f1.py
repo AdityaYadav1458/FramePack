@@ -32,6 +32,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--share', action='store_true')
 parser.add_argument("--server", type=str, default='0.0.0.0')
 parser.add_argument("--port", type=int, required=False)
+parser.add_argument("--root_path", type=str, default='/')
 parser.add_argument("--inbrowser", action='store_true')
 args = parser.parse_args()
 
@@ -387,4 +388,5 @@ block.launch(
     server_port=args.port,
     share=args.share,
     inbrowser=args.inbrowser,
+    root_path=args.root_path,
 )
