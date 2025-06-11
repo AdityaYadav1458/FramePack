@@ -47,10 +47,10 @@ class LoadingHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "text/html; charset=utf-8")
         self.end_headers()
         # refresh every 5 seconds to the Gradio root path
-        html = """
+        html = f"""
         <html>
           <head>
-            <meta http-equiv="refresh" content="5; URL=/new" />
+            <meta http-equiv="refresh" content="5; URL={args.root_path}" />
             <title>Loading Models…</title>
           </head>
           <body>
